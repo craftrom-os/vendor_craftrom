@@ -4,13 +4,14 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-# LineageOS System Version
+# CraftRomOS System Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.version=$(LINEAGE_VERSION) \
-    ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
-    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.craftrom.version=$(LINEAGE_VERSION) \
+    ro.craftrom.releasetype=$(CUSTOM_BUILD_TYPE) \
+    ro.craftrom.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.craftrom.maintainer=$(CUSTOM_MAINTAINER) \
     ro.modversion=$(LINEAGE_VERSION) \
-    ro.lineagelegal.url=https://lineageos.org/legal
+    ro.lineagelegal.url=https://lineageos.org/legal  
 
 # LineageOS Platform Display Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
