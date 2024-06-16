@@ -42,8 +42,8 @@ DEBUG = False
 
 custom_local_manifest = ".repo/local_manifests/craftrom.xml"
 custom_default_revision =  "uther"
-custom_dependencies = "aosp.dependencies"
-org_manifest = "craftrom"  # leave empty if org is provided in manifest
+custom_dependencies = "lineage.dependencies"
+org_manifest = "craftrom-os"  # leave empty if org is provided in manifest
 org_display = "craftrom-os"  # needed for displaying
 
 github_auth = None
@@ -278,15 +278,15 @@ def main():
     for repository in repositories:
         repo_name = repository['name']
 
-        if not (repo_name.startswith("android_device_") and
+        if not (repo_name.startswith("device_") and
                 repo_name.endswith("_" + device)):
             continue
         print("Found repository: %s" % repository['name'])
 
         fallback_branch = detect_revision(repository)
-        manufacturer = repo_name.replace("android_device_", "").replace("_" + device, "")
+        manufacturer = repo_name.replace("device_", "").replace("_" + device, "")
         repo_path = "device/%s/%s" % (manufacturer, device)
-        adding = [{'repository': "crdroidandroid/" + repo_name, 'target_path': repo_path}]
+        adding = [{'repository': "craftrom-os/" + repo_name, 'target_path': repo_path}]
 
         add_to_manifest(adding, fallback_branch)
 

@@ -25,6 +25,13 @@ PRODUCT_PACKAGES += \
     AudioFX
 endif
 
+# Don't dexpreopt prebuilts. (For GMS).
+DONT_DEXPREOPT_PREBUILTS := true
+
+# Google - GMS, Pixel
+$(call inherit-product, vendor/google/gms/config.mk)
+$(call inherit-product, vendor/google/pixel/config.mk)
+
 # Extra cmdline tools
 PRODUCT_PACKAGES += \
     unrar \
