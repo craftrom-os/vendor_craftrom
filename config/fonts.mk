@@ -1,5 +1,5 @@
 # Fonts
-LOCAL_PATH := vendor/awaken/fonts
+LOCAL_PATH := vendor/lineage/fonts
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/ttf,$(TARGET_COPY_OUT_PRODUCT)/fonts)
 
 PRODUCT_COPY_FILES += \
@@ -13,4 +13,6 @@ PRODUCT_PACKAGES += \
     FontManropeOverlay \
     FontOnePlusSansOverlay \
     FontOneplusSlateSourceOverlay \
-    FontOppoSansOverlay
+    FontOppoSansOverlay \
+    FontLatoOverlay \
+    FontRubikOverlay

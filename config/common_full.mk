@@ -31,7 +31,5 @@ PRODUCT_PACKAGES += \
     zstd
 
 # Fonts
-PRODUCT_PACKAGES += \
-    fonts_customization.xml \
-    FontLatoOverlay \
-    FontRubikOverlay
+include vendor/lineage/config/fonts.mk
+
