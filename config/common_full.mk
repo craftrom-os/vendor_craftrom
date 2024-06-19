@@ -15,10 +15,21 @@ PRODUCT_PACKAGES += \
     Recorder \
     Seedvault
 
+# Camera
+# Check if PRODUCT_NO_CAMERA is not true
 ifneq ($(PRODUCT_NO_CAMERA),true)
-PRODUCT_PACKAGES += \
-    Aperture
+    # Set default value for TARGET_GCAM_SUPPORTED
+    TARGET_GCAM_SUPPORTED ?= true
+    # Check if TARGET_GCAM_SUPPORTED is true
+    ifeq ($(TARGET_GCAM_SUPPORTED),true)
+        PRODUCT_PACKAGES += \
+            GoogleCameraGo
+    else
+        PRODUCT_PACKAGES += \
+            Aperture
+    endif
 endif
+
 
 ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
 PRODUCT_PACKAGES += \
