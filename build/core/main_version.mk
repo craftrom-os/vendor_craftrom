@@ -6,12 +6,19 @@ endif
 
 # CraftRomOS System Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.craftrom.version=$(LINEAGE_VERSION) \
-    ro.craftrom.releasetype=$(CUSTOM_BUILD_TYPE) \
-    ro.craftrom.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
+    ro.custom.build.date=$(CUSTOM_BUILD_DATE ) \
+    ro.custom.device=$(CRAFTROM_DEVICE) \
+    ro.custom.version=$(CUSTOM_VERSION_PROP) \
     ro.craftrom.maintainer=$(CUSTOM_MAINTAINER) \
+    ro.craftrom.build_type=$(CUSTOM_BUILD_TYPE) \
     ro.modversion=$(LINEAGE_VERSION) \
-    ro.lineagelegal.url=https://lineageos.org/legal  
+    ro.lineagelegal.url=https://craft-rom.pp.ua/terms-of-use
+
+# LineageOS System Version
+ADDITIONAL_SYSTEM_PROPERTIES += \
+    ro.lineage.version=$(LINEAGE_VERSION) \
+    ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
+    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)
 
 # LineageOS Platform Display Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
