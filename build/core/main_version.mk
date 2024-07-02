@@ -11,12 +11,12 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.custom.version=$(CUSTOM_VERSION_PROP) \
     ro.craftrom.maintainer=$(CUSTOM_MAINTAINER) \
     ro.craftrom.build_type=$(CUSTOM_BUILD_TYPE) \
-    ro.modversion=$(LINEAGE_VERSION) \
+    ro.modversion=$(CRAFT_VERSION) \
     ro.lineagelegal.url=https://craft-rom.pp.ua/terms-of-use
 
 # LineageOS System Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.version=$(LINEAGE_VERSION) \
+    ro.lineage.version=$(CRAFT_VERSION) \
     ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
     ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)
 

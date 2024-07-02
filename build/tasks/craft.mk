@@ -17,7 +17,7 @@
 # -----------------------------------------------------------------
 # Lineage OTA update package
 
-CRAFT_TARGET_PACKAGE := $(PRODUCT_OUT)/$(LINEAGE_VERSION).zip
+CRAFT_TARGET_PACKAGE := $(PRODUCT_OUT)/$(CRAFT_VERSION).zip
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 
