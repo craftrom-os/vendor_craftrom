@@ -7,7 +7,6 @@ endif
 # CraftRomOS System Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.custom.build.date=$(CUSTOM_BUILD_DATE ) \
-    ro.custom.device=$(CRAFTROM_DEVICE) \
     ro.custom.version=$(CUSTOM_VERSION_PROP) \
     ro.craftrom.maintainer=$(CUSTOM_MAINTAINER) \
     ro.craftrom.build_type=$(CUSTOM_BUILD_TYPE) \
