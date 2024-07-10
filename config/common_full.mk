@@ -36,12 +36,15 @@ PRODUCT_PACKAGES += \
     AudioFX
 endif
 
+TARGET_GAPPS_SUPPORTED ?= false
+ifeq ($(TARGET_GAPPS_SUPPORTED),true)
 # Don't dexpreopt prebuilts. (For GMS).
 DONT_DEXPREOPT_PREBUILTS := true
 
 # Google - GMS, Pixel
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
+endif
 
 # Extra cmdline tools
 PRODUCT_PACKAGES += \
